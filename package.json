@@ -1,6 +1,6 @@
 {
-  "name": "@charlie.f/fe-toolbox",
-  "version": "1.0.2",
+  "name": "@charlief/fe-toobox",
+  "version": "1.0.0",
   "description": "tool box of util functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
