@@ -1,2 +1,4 @@
-rollup.config.js
 node_modules
+rollup.config.js
+.eslintrc.js
+babel.config.js
