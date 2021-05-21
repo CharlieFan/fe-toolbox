@@ -1,5 +1,5 @@
 {
-  "name": "@charlief/fe-toobox",
+  "name": "@charliefan/fe-toolbox",
   "version": "1.0.0",
   "description": "tool box of util functions",
   "main": "dist/index.js",
