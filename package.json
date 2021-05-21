@@ -1,32 +1,42 @@
 {
-    "name": "fe-toolbox",
-    "version": "1.0.0",
-    "description": "util functions tool box",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "author": "Charlie",
-    "license": "MIT",
-    "scripts": {
-        "build:types": "tsc --emitDeclarationOnly --outDir dist",
-        "build:lib": "rollup --config rollup.config.js",
-        "build": "npm run build:types && npm run build:lib"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.14.3",
-        "@babel/plugin-transform-runtime": "^7.14.3",
-        "@babel/preset-env": "^7.14.2",
-        "@babel/preset-typescript": "^7.13.0",
-        "@rollup/plugin-babel": "^5.3.0",
-        "@rollup/plugin-node-resolve": "^13.0.0",
-        "eslint": "^7.26.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^3.4.0",
-        "rollup": "^2.48.0",
-        "rollup-plugin-delete": "^2.0.0",
-        "typescript": "^4.2.4"
-    },
-    "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^4.24.0",
-        "@typescript-eslint/parser": "^4.24.0"
-    }
+  "name": "@charlie.f/fe-toolbox",
+  "version": "1.0.1",
+  "description": "tool box of util functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "charlie.f",
+  "license": "MIT",
+  "scripts": {
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "build:lib": "rollup --config rollup.config.js",
+    "build": "npm run build:types && npm run build:lib"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "rollup": "^2.48.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlieFan/fe-toolbox.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "bugs": {
+    "url": "https://github.com/CharlieFan/fe-toolbox/issues"
+  },
+  "homepage": "https://github.com/CharlieFan/fe-toolbox#readme"
 }
