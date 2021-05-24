@@ -1,5 +1,5 @@
 /**
- * get selected string array by given current target and current selected list:
+ * get selected array by given current target and current selected list:
  *
  * e.g:
  * arrayItemPicker(1, [1,2,3]) returns [2,3]
@@ -59,4 +59,15 @@ export function flatDeep<T>(arr: Array<T>, d = 1): Array<T> {
     }
 
     return arr.slice();
+}
+
+/**
+ * object to array:
+ * @param {object} obj
+ * @return {Array<any>}
+ */
+export function ObjToArray(obj: any): Array<any> {
+    return Object.keys(obj).map((key) => {
+        return obj[key];
+    });
 }
