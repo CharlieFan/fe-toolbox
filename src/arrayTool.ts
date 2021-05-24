@@ -44,3 +44,19 @@ export function listItemSelector(
 
     return selectedList.concat([target]);
 }
+
+/**
+ * flat an array recusivly:
+ * @param {Array<T>} arr orginal array
+ * @param {Number} d depth
+ * @returns {Array<T>}
+ */
+export function flatDeep<T>(arr: Array<T>, d = 1): Array<T> {
+    if (d > 0) {
+        return arr.reduce((acc, val) => {
+            return acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val);
+        }, [] as Array<T>);
+    }
+
+    return arr.slice();
+}
