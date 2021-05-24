@@ -90,7 +90,7 @@ exact same with `localStorage.clear()`
 
 ### String Tool
 
-`stringhighlighter` is the function that can match string in an origin string and highlight it with \<b> tag
+1. `stringhighlighter` is the function that can match string in an origin string and highlight it with \<b> tag
 
 `stringhighlighter(keywords: string, orgin: string,):string`
 
@@ -101,6 +101,30 @@ const highlighted = stringhighlighter('777 Bay', '777 Bay street, Toronto, ON');
 
 // will return '<b>777 Bay</b> street, Toronto, ON'
 ```
+
+2. `numberStringFormat` is a function to format number into a string as required. For example, to format a number into a currency number string
+
+`numberStringFormat(numberSrc: string | number, bit = 0, sign = ',', gapNum = 3): string`
+
+`digits` (optional) The number of digits to appear after the decimal point
+
+`sign` (optional) default is ',' seperator symbol e.g thousand seperator
+
+`gapnum` (optioal) default is 3, the number of digits where the `sign` appear after.
+
+```
+import { numberStringFormat } from '@charliefan/fe-toolbox';
+
+const price = numberStringFormat(64999);
+
+// price -> '64,999'
+
+const productNum = numberStringFormat(123123123433, 0, '-', 4);
+
+// productNum -> '1231-2312-3433'
+```
+
+`numberFormat(numberSrc: string | number, bit = 0, sign = ',', gapNum = 3): string`
 
 ### Array Tool
 

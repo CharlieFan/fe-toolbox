@@ -26,3 +26,29 @@ export function stringhighlighter(keyword = '', origin: string): string {
 
     return origin;
 }
+
+/**
+ * Number string formatter:
+ * e.g input: 100000, output: '100,000'
+ * @param {number|string} numberSrc source input number
+ * @param {number} digits (optional) The number of digits to appear after the decimal point
+ * @param {string} sign (optional) defualt ',' seperator e.g thousand seperator
+ * @param {number} gapnum (optioal) defualt 3 seperator per digit
+ * @return {string}
+ */
+export function numberStringFormat(numberSrc: string | number, digits = 0, sign = ',', gapNum = 3): string {
+    const num = Number(numberSrc);
+
+    if (Number.isNaN(num)) {
+        return `${numberSrc}`;
+    }
+
+    const numStr = num.toFixed(digits); // 格式化
+
+    const numberArr = numStr.split('.');
+    const pattern = new RegExp('\\B(?=(\\d{' + gapNum + '})+(?!\\d))', 'g');
+
+    numberArr[0] = numberArr[0].toString().replace(pattern, sign);
+
+    return numberArr.join('.');
+}
