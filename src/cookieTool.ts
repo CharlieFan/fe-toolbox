@@ -16,3 +16,23 @@ export function getCookieItem(key: string): string {
 
     return value;
 }
+
+/**
+ * set a cookie value:
+ * @param key
+ * @param value
+ * @param expiresMilliSeconds
+ * @void
+ */
+export function setCookie(key: string, value: string, expiresMilliSeconds?: number): void {
+    let expires = '';
+
+    if (expiresMilliSeconds) {
+        const d = new Date();
+        d.setTime(d.getTime() + expiresMilliSeconds);
+        expires = `expires=${d.toUTCString()}`;
+    }
+
+    document.cookie = `${key}=${value};${expires ? `${expires};` : ''}path=/`;
+    return;
+}

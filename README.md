@@ -42,6 +42,19 @@ import { getCookieItem } from '@charliefan/fe-toolbox';
 const myKeyValue = getCookieItem('mykey');
 ```
 
+Set a cookie:
+
+`setCookie(key: string, value: string, expiresMilliSeconds?: number): void`
+
+```
+import { setCookie } from '@charliefan/fe-toolbox';
+
+const myKey = setCookie('mykey', '123');
+
+const myCookie = setCookie('mykey', '123', 1000);
+// myCookie will expired in 1 second
+```
+
 ### localStorage Tool
 
 1. set item in localStorage:
