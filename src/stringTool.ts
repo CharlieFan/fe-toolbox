@@ -43,7 +43,7 @@ export function numberStringFormat(numberSrc: string | number, digits = 0, sign 
         return `${numberSrc}`;
     }
 
-    const numStr = num.toFixed(digits); // 格式化
+    const numStr = num.toFixed(digits); // fix the remain
 
     const numberArr = numStr.split('.');
     const pattern = new RegExp('\\B(?=(\\d{' + gapNum + '})+(?!\\d))', 'g');
